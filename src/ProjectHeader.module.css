@@ -1,0 +1,162 @@
+@import url('index.css');
+
+h1 {
+    margin: 1rem 0;
+    }
+    
+p {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+}
+
+.container {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 10;
+    /* border: 1px solid black; */
+    font-family: 'Commissioner', sans-serif;
+    width: 60%;
+    top: 80%;
+    border-radius: 10px;
+
+}
+
+.logo {
+   position: relative;
+   margin-bottom: 3rem;
+}
+
+.logo > img {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: -1.3rem;
+    left: calc(50% - 23px);
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    padding: 2rem 0;
+    margin: 1rem;
+}
+
+.actions > button {
+    border: none;
+    padding: 12px 22px;
+    background-color: var(--dark-cyan);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 25px;
+}
+
+.actions > button:hover {
+    cursor: pointer;
+    background-color: hsl(176deg 77% 21%);
+}
+
+.bookmark {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--clr-gray300);
+    border-radius: 25px;
+    gap: .7rem;
+    padding: 0px 22px 0 0;
+}
+
+.bookmark > span {
+    color: var(--dark-gray);
+    font-weight: 600;
+    margin-bottom: 3px;
+    font-size: 1.2rem;
+
+}
+
+.icon {
+    background-color: var(--dark-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: white;
+}
+
+.icon:hover {
+    background-color: var(--dark-cyan);
+    cursor: pointer;
+}
+
+.bookmark.active {
+    background-color: aliceblue;
+}
+
+.bookmark.active > span {
+    color: var(--dark-cyan);
+}
+
+.bookmark.active > .icon {
+    background-color: var(--dark-cyan);
+}
+
+@media only screen and (max-width: 540px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: .9rem;
+    }
+
+    .logo {
+        margin-bottom: 2rem;
+    }
+
+    .logo > img {
+        top: -30px;
+        left: calc(50% - 23px);
+        width: 45px;
+        height: 45px;
+    }
+    .container {
+        width: 80%;
+        padding: .7rem;
+    }
+
+    .actions {
+        margin-bottom: 0;
+    }
+
+    .actions > button {
+        padding: 10px 18px;
+    }
+
+    .bookmark {
+        padding: 0;
+    }
+
+    .bookmark > span, .bookmark.active > span {
+        display: none;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+
+
+
+
+

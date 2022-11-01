@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import styles from './App.module.css';
-import {IoClose, IoMenu} from 'react-icons/io5'
+import {IoClose, IoMenu} from 'react-icons/io5';
+import {ProjectHeader} from './ProjectHeader';
 
 function App() {
   const [active, setActive] = useState<boolean>(false);
   return (
-    <div className="App">
+    <div className={styles.App}>
       <img
           src='/image-hero-desktop.jpg'
           srcSet="/image-hero-mobile.jpg 700w, /image-hero-desktop.jpg 1440w"
@@ -29,6 +30,7 @@ function App() {
           </ul>
         </div>
       </div>
+      <ProjectHeader />
       
     </div>
   );
