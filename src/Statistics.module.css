@@ -1,0 +1,76 @@
+@import url('index.css');
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-width: 60%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    font-family: 'Commissioner', sans-serif;
+    margin-bottom: 20rem;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+
+.sum {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: flex-start;
+    border-right: 2px solid var(--clr-gray300);
+    padding-left: 3rem;
+    flex-grow: 3;
+}
+
+.sum:last-child {
+    border-right: none;
+}
+
+.sum > p:first-child {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: black;
+}
+
+.sum > p {
+    font-size: 1rem;
+}
+
+
+.progress {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 5rem;
+}
+
+.progress > progress {
+    width: 100%;
+    height: 2rem;
+    accent-color: var(--moderate-cyan);
+}
+
+.bar {
+    width: 100%;
+    background-color: var(--clr-gray300);
+    height: 1.2rem;
+    border-radius: 25px;
+
+}
+
+.bar > .result {
+    background-color: var(--moderate-cyan);
+    height: 1.2rem;
+    border-radius: 25px;
+}

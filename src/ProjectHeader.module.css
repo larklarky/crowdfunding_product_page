@@ -11,16 +11,13 @@ p {
 
 .container {
     display: flex;
-    position: absolute;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;
     z-index: 10;
-    /* border: 1px solid black; */
     font-family: 'Commissioner', sans-serif;
     width: 60%;
-    top: 80%;
     border-radius: 10px;
 
 }
