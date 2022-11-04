@@ -55,12 +55,6 @@
     padding: 2rem 5rem;
 }
 
-.progress > progress {
-    width: 100%;
-    height: 2rem;
-    accent-color: var(--moderate-cyan);
-}
-
 .bar {
     width: 100%;
     background-color: var(--clr-gray300);
@@ -73,4 +67,43 @@
     background-color: var(--moderate-cyan);
     height: 1.2rem;
     border-radius: 25px;
+}
+
+@media only screen and (max-width: 912px) {
+    .container {
+        width: 80%;
+        padding: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 540px) {
+    .container {
+        width: 80%;
+        padding: 1rem;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .sum {
+        align-items: center;
+        border-bottom: 2px solid var(--clr-gray300);
+        border-right: none;
+        padding-left: 0;
+        padding-bottom: 1.5rem;
+    }
+
+    .sum:last-child {
+        border-bottom: none;
+    }
+
+    .progress {
+        padding: 1rem 1rem 2rem 1rem;
+        }
+
+    .bar, .bar > .result {
+        height: .9rem;
+    }
 }

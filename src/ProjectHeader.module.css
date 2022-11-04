@@ -105,6 +105,12 @@ p {
     background-color: var(--dark-cyan);
 }
 
+@media only screen and (max-width: 912px) {
+    .container {
+        width: 80%;
+    }
+}
+
 @media only screen and (max-width: 540px) {
     h1 {
         font-size: 1.5rem;
