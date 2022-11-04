@@ -1,0 +1,37 @@
+@import url('index.css');
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 3rem;
+    font-family: 'Commissioner', sans-serif;
+    margin-bottom: 3rem;
+}
+
+h2, p {
+    text-align: start;
+    margin-bottom: 2rem;
+}
+
+
+p {
+    font-size: 1.2rem;
+}
+
+
+@media only screen and (max-width: 912px) {
+    .container {
+        width: 80%;
+        padding: 2rem 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 540px) {
+    .container {
+        width: 80%;
+    }
+}

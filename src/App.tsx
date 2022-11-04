@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import styles from './App.module.css';
 import {IoClose, IoMenu} from 'react-icons/io5';
 import {ProjectHeader} from './ProjectHeader';
-import {Statistics} from './Statistics'
+import {Statistics} from './Statistics';
+import {MainInfo} from './MainInfo';
 
 function App() {
   const [active, setActive] = useState<boolean>(false);
@@ -41,6 +42,7 @@ function App() {
       <div className={styles.container}>
         <ProjectHeader />
         <Statistics goal={goal} money={money} backers={backers} days={days} currency={currency}/>
+        <MainInfo />
       </div>
       
     </div>
