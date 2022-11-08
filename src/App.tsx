@@ -16,12 +16,12 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <img
+      {/* <img
           src='/image-hero-desktop.jpg'
           srcSet="/image-hero-mobile.jpg 700w, /image-hero-desktop.jpg 1440w"
           sizes="(max-width: 700px) 700px, 1440px"
           alt="desktop"
-        />
+        /> */}
       
       <div className={styles.navbar}>
         <div className={styles.logo}>crowdfund</div>

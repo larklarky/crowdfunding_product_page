@@ -8,24 +8,21 @@
   position: relative;
 }
 
-img {
-  width: 100%;
-  z-index: -10;
-  position: relative;
-}
-
 .navbar {
-  position: absolute;
-  top: 0;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
   padding: 1rem 3.5rem;
-  z-index: 1;
   color: white;
   font-family: 'Commissioner', sans-serif;
   width: 100%;
+  min-height: 40vh;
+  background-image: url('/public/image-hero-desktop.jpg');
+  /* background-image: image-set(url('/public/image-hero-mobile.jpg') 1x, url('/public/image-hero-desktop.jpg') 2x);
+  background-image: -webkit-image-set(url('/public/image-hero-mobile.jpg') 1x, url('/public/image-hero-desktop.jpg') 2x); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .logo {
@@ -63,13 +60,29 @@ li:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  z-index: 10; 
-  top: 80%;
   width: 100%;
   margin-bottom: 2rem;
+  margin-top: -4em;
   gap: 2rem;
+  z-index: 2;
  }
+
+ .totalLayer {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: transparent;
+    transition: 1s;
+    z-index: -4;
+  }
+  
+  .totalLayer.show {
+    background-color: rgba(31, 29, 29, 0.426);
+    z-index: 4;
+  }
+ 
 
 @media only screen and (max-width: 540px) {
   .navbar {
@@ -123,6 +136,7 @@ li:hover {
     background-color: white;
     color: var(--black);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 100;
   }
 }
 
