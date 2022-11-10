@@ -1,24 +1,20 @@
+import { useState } from 'react';
 import styles from './Card.module.css';
+import { Pledge } from './App';
 
-type Data = {
-    title: string;
-    pledge: number;
-    description: string;
-    amount: number;
+type CardProps = {
+    pledge: Pledge
 }
 
-type GotProps = {
-    pledge: Data
-}
+export const Card = ({pledge}: CardProps) => {
+    const [rewardField, setRewardField] = useState<boolean>(false);
 
-
-export const Card = ({pledge}: GotProps) => {
     const Convertion = (amount: number, currency: string = 'USD') => {
         return new Intl.NumberFormat('en-US', {style: 'currency', currency: currency, minimumFractionDigits: 0}).format(amount)
      }
 
     return(
-        <div className={styles.container}>
+        <div key={pledge.id} className={styles.container}>
             <div className={styles.title}>
                 <h2>{pledge.title}</h2>
                 <span>Pledge {Convertion(pledge.pledge)} or more</span>
@@ -32,6 +28,9 @@ export const Card = ({pledge}: GotProps) => {
                 <button 
                     disabled ={pledge.amount > 0 ? false : true}
                 >{pledge.amount > 0 ? 'Select Reward' : 'Out of stock'}</button>
+            </div>
+            <div className={styles.reward}>
+
             </div>
         </div>
     )
