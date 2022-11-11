@@ -1,4 +1,12 @@
 
+.error {
+    display: inline;
+    color: orange;
+    text-align: right;
+    margin-left: 2.3rem;
+  
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -48,7 +56,7 @@
     color: var(--dark-gray);
 }
 
-.footer > button {
+.footer > button, .actions > button {
     border: none;
     padding: 12px 22px;
     background-color: var(--moderate-cyan);
@@ -58,13 +66,88 @@
     border-radius: 25px;
 }
 
-.footer > button:hover {
+.footer > button:hover, .actions > button:hover {
     background-color: var(--dark-cyan);
     cursor: pointer;
 }
 
-.footer > button:disabled {
+.footer > button:disabled, .actions > button:disabled {
     background-color: var(--dark-gray)
+}
+
+.footer > .none, .none {
+    display: none;
+}
+
+.reward {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--clr-gray300);
+    padding: 2rem 0 0 0;
+}
+
+.reward > span {
+    color: var(--dark-gray);
+    font-weight: 600;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: end;
+    position: relative;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+input {
+    width: 35%;
+    outline: none;
+    border-radius: 25px;
+    border: 2px solid var(--clr-gray300);
+    text-align: left;
+    padding: 0px 20px 0px 30px;
+    font-size: 1rem;
+    color: var(--dark-gray);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+}
+
+input:focus {
+    border: 2px solid var(--moderate-cyan);
+}
+
+input:invalid{
+    border: 2px solid orange;
+}
+
+.invalid:focus, .invalid {
+    border: 2px solid orange;
+}
+
+.actions::before {
+    content:'$';
+    color: var(--dark-gray);
+    font-weight: 700;
+    position: absolute;
+    left: 120px;
+    margin-top: 13px;    
 }
 
 @media only screen and (max-width: 540px) {
@@ -93,7 +176,63 @@
         gap: 1.5rem;
     }
 
+    .reward {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .actions {
+        width: 100%;
+        gap: .5rem;
+        justify-content: center;
+    }
+
+    .actions::before {
+        margin-top: 8px;
+        margin-left: -40px;
+    }
+
+    .actions > button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    input {
+        width: 30%;
+    }
+
+    .reward > span > span {
+        margin: 0;
+    }
+
+    .error {
+        display: block;
+    }
+
 }
+
+@media only screen and (max-width: 414px) {
+    .actions::before {
+        margin-top: 8px;
+        margin-left: -85px;
+    }
+    input {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .actions::before {
+        margin-top: 8px;
+        margin-left: -100px;
+    }
+
+    input {
+        width: 45%;
+    }
+}
+
+
 
 
 

@@ -33,8 +33,10 @@ type Action = {
   payload: Payload;
 }
 
-
-const AppContext = createContext<AppContextInterface | {}>({});
+type ContextValue = {
+  state: AppContextInterface;
+  dispatch: (action: Action) => void;
+}
 
 const AppData: AppContextInterface ={
   goal: 100000,
@@ -63,6 +65,10 @@ const AppData: AppContextInterface ={
     }
   ]
 }
+
+
+
+export const AppContext = createContext<ContextValue>({state: AppData, dispatch: (action: Action) => {}});
 
 const initialState = AppData;
 
