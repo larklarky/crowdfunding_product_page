@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { MouseEventHandler, useContext, useState } from 'react';
 import styles from './Card.module.css';
 import { Pledge, AppContext } from './App';
 
@@ -8,8 +8,8 @@ type CardProps = {
 
 export const Card = ({pledge}: CardProps) => {
     const [rewardField, setRewardField] = useState<boolean>(false);
-    const [bid, setBid] = useState<number>(pledge.pledge)
-    const {state, dispatch} = useContext(AppContext)
+    const [bid, setBid] = useState<number>(pledge.pledge);
+    const {state, dispatch} = useContext(AppContext);
 
     const Convertion = (amount: number, currency: string = 'USD') => {
         return new Intl.NumberFormat('en-US', {style: 'currency', currency: currency, minimumFractionDigits: 0}).format(amount)
@@ -17,6 +17,7 @@ export const Card = ({pledge}: CardProps) => {
 
     const handlePledge = (pledgeId: number, money:number) => {
         dispatch({type: 'add', payload: {money: money, pledgeId: pledgeId}})
+        dispatch({type: 'thanksModal', payload:{thanksModal: true}})
     }
 
     return(

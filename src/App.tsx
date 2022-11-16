@@ -4,6 +4,7 @@ import {IoClose, IoMenu} from 'react-icons/io5';
 import {ProjectHeader} from './ProjectHeader';
 import {Statistics} from './Statistics';
 import {MainInfo} from './MainInfo';
+import {ThanksPopup} from './ThanksPopup';
 
 export type Pledge = {
   id: number;
@@ -21,6 +22,7 @@ interface AppContextInterface {
   backers: number;
   days: number;
   pledges: Pledge[];
+  thanksModal: boolean;
 }
 
 type Payload = {
@@ -28,9 +30,13 @@ type Payload = {
   pledgeId: number;
 }
 
+type ModalPayload = {
+  thanksModal: boolean;
+}
+
 type Action = {
   type: string;
-  payload: Payload;
+  payload: any;
 }
 
 type ContextValue = {
@@ -63,7 +69,8 @@ const AppData: AppContextInterface ={
     description: `You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You'll be added to our Backer member list. Shipping is included. `,
     amount: 0
     }
-  ]
+  ],
+  thanksModal: false,
 }
 
 
@@ -86,6 +93,10 @@ function reducer(state: AppContextInterface, action: Action) {
           }
         })
       })
+      case 'thanksModal':
+        return Object.assign({}, state, {
+          thanksModal: action.payload.thanksModal
+        })
     default:
       return state
   }
@@ -100,6 +111,7 @@ function App() {
   return (
     <AppContext.Provider value={{state, dispatch}}>
         <div className={styles.App}>
+          <ThanksPopup thanksModal={state.thanksModal}/>
           <div className={styles.navbar}>
             <div className={styles.logo}>crowdfund</div>
             <div className={styles.links}>
@@ -120,6 +132,7 @@ function App() {
             <ProjectHeader />
             <Statistics goal={state.goal} money={state.money} backers={state.backers} days={state.days} currency={state.currency}/>
             <MainInfo pledges={state.pledges}/>
+            
           </div>
         
       </div>
