@@ -12,7 +12,7 @@ export const ProjectHeader = () => {
             <h1>Mastercraft Bamboo Monitor Riser</h1>
             <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
             <div className={styles.actions}>
-                <button>Back this project</button>
+                <a href='#pledges'><button>Back this project</button></a>
                 <div className={bookmarked ? `${styles.bookmark} ${styles.active}` : styles.bookmark}>
                     <div onClick={() => setBookmarked(!bookmarked)} className={styles.icon}>
                         <FaBookmark size='16px'/>

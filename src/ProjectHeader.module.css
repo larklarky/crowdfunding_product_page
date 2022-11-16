@@ -44,7 +44,7 @@ p {
     margin: 1rem;
 }
 
-.actions > button {
+.actions > a > button {
     border: none;
     padding: 12px 22px;
     background-color: var(--dark-cyan);
@@ -54,7 +54,7 @@ p {
     border-radius: 25px;
 }
 
-.actions > button:hover {
+.actions > a > button:hover {
     cursor: pointer;
     background-color: hsl(176deg 77% 21%);
 }

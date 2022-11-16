@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext, useReducer } from 'react';
+import React, { useState, createContext, useReducer } from 'react';
 import styles from './App.module.css';
 import {IoClose, IoMenu} from 'react-icons/io5';
 import {ProjectHeader} from './ProjectHeader';
