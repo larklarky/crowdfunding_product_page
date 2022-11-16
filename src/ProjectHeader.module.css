@@ -27,12 +27,16 @@ p {
    margin-bottom: 3rem;
 }
 
-.logo > img {
+.logo > .image {
     width: 45px;
     height: 45px;
     position: absolute;
     top: -1.3rem;
     left: calc(50% - 23px);
+    background-image: url('/public/logo-mastercraft.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .actions {

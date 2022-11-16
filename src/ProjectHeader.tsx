@@ -7,7 +7,7 @@ export const ProjectHeader = () => {
     return(
         <div className={styles.container}>
             <div className={styles.logo}>
-                <img src='/logo-mastercraft.svg' alt='logo'></img>
+                <div className={styles.image}></div>
             </div>
             <h1>Mastercraft Bamboo Monitor Riser</h1>
             <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
