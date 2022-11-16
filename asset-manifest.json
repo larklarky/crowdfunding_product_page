@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/crowdfunding_product_page/static/css/main.4720c751.css",
+    "main.js": "/crowdfunding_product_page/static/js/main.8421fff8.js",
+    "static/js/787.c26975e7.chunk.js": "/crowdfunding_product_page/static/js/787.c26975e7.chunk.js",
+    "static/media/image-hero-desktop.jpg": "/crowdfunding_product_page/static/media/image-hero-desktop.631209c1fe8e34fb78c2.jpg",
+    "index.html": "/crowdfunding_product_page/index.html",
+    "main.4720c751.css.map": "/crowdfunding_product_page/static/css/main.4720c751.css.map",
+    "main.8421fff8.js.map": "/crowdfunding_product_page/static/js/main.8421fff8.js.map",
+    "787.c26975e7.chunk.js.map": "/crowdfunding_product_page/static/js/787.c26975e7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4720c751.css",
+    "static/js/main.8421fff8.js"
+  ]
+}
